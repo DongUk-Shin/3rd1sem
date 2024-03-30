@@ -1,0 +1,14 @@
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\4w\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll
