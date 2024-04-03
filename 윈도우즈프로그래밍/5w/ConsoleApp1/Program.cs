@@ -1,4 +1,3 @@
-﻿/*
 
 Console.Write("a 입력: ");
 double a = Convert.ToDouble(Console.ReadLine());
@@ -21,48 +20,48 @@ if (근 < 0)
     Console.WriteLine("첫번째 근: "+ x1 + " 두번째 근: "+ x2);
 }
 
-using System.Runtime.ExceptionServices;
-using System.Runtime.Serialization.Formatters;
 
-Console.WriteLine();
-Console.WriteLine();
+Console.WriteLine(); Console.WriteLine();
 
 int sum = 0;
-for (int i = 9; i > 0; i -= 2)
+int[] arr1 = new int[] { 1, 3, 5, 7, 9 };
+for (int i = 5; i > 0; i--)
 {
-
-    int t = 1;
-    for (int j = 1; j <= i; j += 2)
+    int temp = 1;
+    for (int j = 0; j < i; j++)
     {
-        if (j != i)
+        if (j == i-1)
         {
-            Console.Write(j + " * ");
+            Console.Write(arr1[j] + " ");
         } else
         {
-            Console.Write(j);
+            Console.Write(arr1[j] + " * ");
         }
-        t *= j;
-
+        temp *= arr1[j];
     }
-    Console.Write(" " + t);
-    sum += t;
+    Console.Write(temp);
+    sum += temp;
     Console.WriteLine();
 }
 Console.WriteLine("2-1 총합: " + sum);
 Console.WriteLine();
 
+double[] arr2 = new double[] { 2, 4, 6, 8, 10 };
 double sum2 = 0;
-int 부호 = 1;
-for (int i = 2; i <= 10; i += 2)
+double 부호 = 1;
+for (int i = 0; i < arr2.Length; i++)
 {
-    double t = i;
+    double div = (1 / arr2[i]);
+    Console.WriteLine("1 / " + arr2[i] + " = " + div);
 
-    Console.WriteLine("1 / " + i + " = " + 1 / t);
-    sum2 += (1 / t) * 부호;
+    sum2 += (부호 * div);
     부호 *= -1;
 }
 Console.WriteLine("2-2 총합: " + sum2);
 Console.WriteLine();
+Console.WriteLine();
+
+
 
 
 for (int i = 9; i > 0; i--)
@@ -88,53 +87,54 @@ Console.WriteLine();
 
 
 
-int a = 4;
+int a4 = 4;
 int space = 1;
 for (int i = 0; i < 7; i++)
 {
-    for (int j = 0; j < a; j++)
+    for (int j = 0; j < a4; j++)
     {
         Console.Write("*");
     }
 
-    for (int j = 0; j < 9 - 2 * a; j++)
+    for (int j = 0; j < 9 - 2 * a4; j++)
     {
         Console.Write(" ");
     }
     
-    for (int j = 0; j < a; j++)
+    for (int j = 0; j < a4; j++)
     {
         Console.Write("*");
     }
 
-    if (a == 1)
+    if (a4 == 1)
     {
         space = -1;
     }
-    a -= space;
+    a4 -= space;
     Console.WriteLine();
 }
 
-*/
+Console.WriteLine();
+Console.WriteLine();
 
 
-int x = 0;
+int x = 1;
 
-for (int i = 1; i < 10; i = i+x) {
+for (int i = 1; i <= 4; i++) {
 
 
-    for (int j = i; j <= i+x; j++)
+    for (int j = 1; j <= 9; j++)
     {
 
-        for (int k = j; k < 10; k++)
+        for (int k = x; k < x+i; k++)
         {
-            //Console.Write(i + " * " + j + " = " + k * j + " ");
 
-            Console.Write(j + "* " + k + "= " + (j*k) + " | ");
+            Console.Write(k + " * " + j + " = " + (k*j) + "\t");
+
         }
         Console.WriteLine();
     }
-    x += i;
+    x+=i;
 
 }
 
