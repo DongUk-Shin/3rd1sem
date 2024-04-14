@@ -2,7 +2,6 @@ class Parser {
     
     final int NONE = 0;
     final int DELIMITER = 1;
-    final int VARIABLE = 2;
     final int NUMBER = 3;
     
     final String EOE = "\0";
@@ -104,39 +103,32 @@ class Parser {
     }
     
     private void lex() {
-        tokType = NONE;
-        token = "";
-        
-        while (expIdx < exp.length() &&
-                Character.isWhitespace(exp.charAt(expIdx))) ++expIdx;
-        
-        if (expIdx == exp.length()) {
-            token = EOE;
-            return;
-        }
-        
-        if (isDelim(exp.charAt(expIdx))) { 
-            token += exp.charAt(expIdx);
-            expIdx++;
-            tokType = DELIMITER;
-        } else if (Character.isLetter(exp.charAt(expIdx))) {
-            while (!isDelim(exp.charAt(expIdx))) {
+            tokType = NONE;
+            token = "";
+            
+            while (expIdx < exp.length() &&
+                    Character.isWhitespace(exp.charAt(expIdx))) ++expIdx;
+            
+            if (expIdx == exp.length()) {
+                token = EOE;
+                return;
+            }
+            
+            if (isDelim(exp.charAt(expIdx))) {
                 token += exp.charAt(expIdx);
                 expIdx++;
-                if (expIdx >= exp.length()) break;
+                tokType = DELIMITER;
+            } else if (Character.isDigit(exp.charAt(expIdx))) {
+                while (!isDelim(exp.charAt(expIdx))) {
+                    token += exp.charAt(expIdx);
+                    expIdx++;
+                    if (expIdx >= exp.length()) break;
+                }
+                tokType = NUMBER;
+            } else {
+                token = EOE;
+                return;
             }
-            tokType = VARIABLE;
-        } else if (Character.isDigit(exp.charAt(expIdx))) { 
-            while (!isDelim(exp.charAt(expIdx))) {
-                token += exp.charAt(expIdx);
-                expIdx++;
-                if (expIdx >= exp.length()) break;
-            }
-            tokType = NUMBER;
-        } else { 
-            token = EOE;
-            return;
-        }
     }
     
     private boolean isDelim(char c) {
