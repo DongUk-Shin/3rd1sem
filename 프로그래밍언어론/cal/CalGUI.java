@@ -56,8 +56,6 @@ public class CalGUI extends JFrame implements ActionListener  {
             button.setFont(new Font("Arial", Font.BOLD, 20)); // 폰트 변경
             button.setBackground(Color.LIGHT_GRAY); // 배경색 변경
             
-            
-            
             buttonPanel.add(button);
         }
         buttonPanel.setPreferredSize(new Dimension(200, 350));

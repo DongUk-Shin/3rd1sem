@@ -1,8 +1,8 @@
 class Parser {
     
     final int NONE = 0;
-    final int DELIMITER = 1;
-    final int NUMBER = 3;
+    final int OPERATOR = 1;
+    final int NUMBER = 2;
     
     final String EOE = "\0";
     
@@ -18,13 +18,13 @@ class Parser {
         expIdx = 0;
         
         lex();
-        if (token.equals(EOE))  
-            return 0;
+        if (token.equals(EOE))
+            handleError();
         
         result = expr();
         
-        if (!token.equals(EOE)) 
-            handleErr();
+        if (!token.equals(EOE))
+            handleError();
         
         return result;
     }
@@ -40,9 +40,9 @@ class Parser {
             lex();
             nextResult = term();
             switch (op) {
-                case '-' -> result -= nextResult;
                 case '+' -> result += nextResult;
-            };
+                case '-' -> result -= nextResult;
+            }
         }
         return result;
     }
@@ -54,87 +54,79 @@ class Parser {
         
         result = factor();
         
-        while ((op = token.charAt(0)) == '*' ||
-                op == '÷') {
+        while ((op = token.charAt(0)) == '*' ||  op == '÷') {
             lex();
             nextResult = factor();
             switch (op) {
                 case '*' -> result *= nextResult;
                 case '÷' -> {
-                    if (nextResult == 0.0)  handleErr();
+                    if (nextResult == 0.0) handleError();
                     result /= nextResult;
                 }
-            };
+            }
         }
         return result;
     }
     
     private double factor() throws ParserException {
-        double result ;
+        double result;
         
         if (token.equals("(")) {
             lex();
             result = expr();
             if (!token.equals(")"))
-                handleErr();
+                handleError();
             lex();
-        } else result = atom();
+        } else result = number();
         
         return result;
     }
     
-    private double atom() throws ParserException
-    {
+    private double number() throws ParserException {
         double result = 0.0;
         
         if (tokType == NUMBER) {
             result = Double.parseDouble(token);
             lex();
         } else {
-            handleErr();
+            handleError();
         }
-        
         return result;
     }
     
     
-    private void handleErr() throws ParserException {
+    private void handleError() throws ParserException {
         throw new ParserException("Error");
     }
     
     private void lex() {
-            tokType = NONE;
-            token = "";
-            
-            while (expIdx < exp.length() &&
-                    Character.isWhitespace(exp.charAt(expIdx))) ++expIdx;
-            
-            if (expIdx == exp.length()) {
-                token = EOE;
-                return;
-            }
-            
-            if (isDelim(exp.charAt(expIdx))) {
+        tokType = NONE;
+        token = "";
+        
+        if (expIdx == exp.length()) {
+            token = EOE;
+            return;
+        }
+        
+        if (isOperator(exp.charAt(expIdx))) {
+            token += exp.charAt(expIdx);
+            expIdx++;
+            tokType = OPERATOR;
+        } else if (Character.isDigit(exp.charAt(expIdx))) {
+            while (!isOperator(exp.charAt(expIdx))) {
                 token += exp.charAt(expIdx);
                 expIdx++;
-                tokType = DELIMITER;
-            } else if (Character.isDigit(exp.charAt(expIdx))) {
-                while (!isDelim(exp.charAt(expIdx))) {
-                    token += exp.charAt(expIdx);
-                    expIdx++;
-                    if (expIdx >= exp.length()) break;
-                }
-                tokType = NUMBER;
-            } else {
-                token = EOE;
-                return;
+                if (expIdx >= exp.length()) 
+                    break;
             }
+            tokType = NUMBER;
+        } else {
+            token = EOE;
+        }
     }
     
-    private boolean isDelim(char c) {
-        if ((" +-*%^=()÷".indexOf(c) != -1))
-            return true;
-        return false;
+    private boolean isOperator(char c) {
+        return "+-*%^=()÷".indexOf(c) != -1;
     }
     
 } 
