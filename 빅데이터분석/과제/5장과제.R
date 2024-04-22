@@ -56,7 +56,7 @@
   #4-4
   sd(score)
   #4-5
-  which.max(score)
+  max(score)
   #4-6
   boxplot(score)
   boxplot.stats(score)

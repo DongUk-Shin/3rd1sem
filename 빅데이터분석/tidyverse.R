@@ -56,3 +56,11 @@ arrange(temp1,Sratio)
 
 temp %>% mutate(Sratio = Sepal.Length /  Sepal.Width)  %>% arrange(temp,Sratio) %>% head()
 temp %>% mutate(Sratio = Sepal.Length /  Sepal.Width)  %>% arrange(temp,desc(Sratio)) %>% head()  
+
+
+
+
+v <- 1:100
+
+v1[1:10] <- sort(v)[1:10] %>%  sort(v)[1:10] 
+v1

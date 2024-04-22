@@ -86,7 +86,7 @@ bal <- c(0.1,0.03,0.19,0.12,0.04,0.0095,0.07,  # 자료 입력
 tbl <- data.frame(beers,bal)                   # 데이터프레임 생성
 tbl
 plot(bal~beers,data=tbl)                       # 산점도
-
+plot(beers, bal)
 # 다음과 같이 해도 무방. 그러나 bal~beers는 beers:독립, abl :종속임을 의미함
 
 plot(tbl[, c("beers", "bal")],        

@@ -35,18 +35,18 @@ head(x)
 sum(is.na(x))
 colSums(is.na(x))
 
-# for문을 이용한 방법
-# for (i in 1:ncol(x)) {
-#   temp <- is.na(x[,i]) 
-#   cat(colnames(x)[i], "\t", sum(temp), "\n") # cat(문자열 합치기), \t(탭), \n(줄바꾸기)
-# }
+#for문을 이용한 방법
+for (i in 1:ncol(x)) {
+   temp <- is.na(x[,i]) 
+  cat(colnames(x)[i], "\t", sum(temp), "\n") # cat(문자열 합치기), \t(탭), \n(줄바꾸기)
+}
 
-# apply를 이용한 방법
-# col_na <- function(y) {
-#   return(sum(is.na(y)))
-# }
-# na_count <-apply(x, 2, FUN=col_na)
-# na_count
+apply를 이용한 방법
+col_na <- function(y) {
+  return(sum(is.na(y)))
+}
+na_count <-apply(x, 2, FUN=col_na)
+na_count
 
 
 
@@ -96,10 +96,13 @@ v3
 #7-10  매트릭스와 데이터프레임의 정렬
 
 head(iris)
-order(iris$Sepal.Length)
-iris[order(iris$Sepal.Length),]                        # 오름차순으로 정렬
-iris[order(iris$Sepal.Length, decreasing=T),]          # 내림차순으로 정렬
-iris.new <- iris[order(iris$Sepal.Length),]            # 정렬된 데이터를 저장
+
+temp <- iris$Sepal.Length
+
+order(temp)
+iris[order(temp),]                        # 오름차순으로 정렬
+iris[order(temp, decreasing=T),]          # 내림차순으로 정렬
+iris.new <- iris[order(temp),]            # 정렬된 데이터를 저장
 head(iris.new)
 iris[order(iris$Species, -iris$Petal.Length, decreasing=T),]   # 정렬 기준이 2개
 
@@ -129,14 +132,13 @@ subset(iris, Sepal.Length > 7.6,
 #7-13  숫자를 임의로 추출하기
 
 x <- 1:100
-y <- sample(x, size=10, replace = FALSE)  # 비복원추출
+sample(x, size=10, replace = FALSE)  # 비복원추출
 y
 
 
 #7-14 행을 임의로 추출하기- 데이터셋에서 n개의 행을 임의로 추출
 
-idx <- sample(1:nrow(iris), size=50,
-              replace = FALSE)
+idx <- sample(1:nrow(iris), size=50, replace = FALSE)
 iris.50 <- iris[idx,]               # 50개의 행 추출
 dim(iris.50)                        # 행과 열의 개수 확인
 head(iris.50)
@@ -179,8 +181,8 @@ rpois(10, 2)
 #7-16 데이터 조합
 #조합(combination): 주어진 데이터값들 중에서 몇 개씩 짝을 지어 추출하는 작업
 
-y= combn(1:5,3)                      # 1~5에서 3개를 뽑는 조합
-y
+combn(1:5,3)                      # 1~5에서 3개를 뽑는 조합
+
 
 for(i in 1:ncol(y)) {           # 조합을 출력
   cat(y[,i], "\n")
@@ -237,6 +239,8 @@ z
 
 #7-22  공통 열의 이름이 다를 때
 
+
+merge(x,y, by=c("name")) 
 merge(x,y, all.x=T)   # 첫 번째 데이터셋의 행들은 모두 표시되도록
 merge(x,y, all.y=T)   # 두 번째 데이터셋의 행들은 모두 표시되도록
 merge(x,y, all=T)     # 두 데이터셋의 모든 행들이 표시되도록
