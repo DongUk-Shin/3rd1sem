@@ -13,9 +13,6 @@ public class ContactSearchService {
     private ContactDao contactDao;
     
 
-    public ContactSearchService() {
-        System.out.println("Search 기본 생성자");
-    }
     
     @Inject
     @Named("contactDao1")
@@ -23,7 +20,7 @@ public class ContactSearchService {
         System.out.println("contactDao = " + contactDao);
         this.contactDao = contactDao;
     }
-    
+
     public ContactSet searchContact(String name) {
         if (verify(name)) {
             return contactDao.select(name);  
