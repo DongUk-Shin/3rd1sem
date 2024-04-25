@@ -1,0 +1,14 @@
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\bin\Debug\net6.0\Test.exe
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\bin\Debug\net6.0\Test.deps.json
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\bin\Debug\net6.0\Test.runtimeconfig.json
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\bin\Debug\net6.0\Test.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\bin\Debug\net6.0\Test.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.AssemblyInfoInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.AssemblyInfo.cs
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.csproj.CoreCompileInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\refint\Test.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\Test.genruntimeconfig.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\Test\obj\Debug\net6.0\ref\Test.dll

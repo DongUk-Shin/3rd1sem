@@ -7,7 +7,6 @@
     string getClan();
 }
 
-
 public abstract class ProtossUnit : Unit
 {
     public abstract int getStrength();
@@ -29,8 +28,6 @@ public abstract class ProtossUnit : Unit
         Clan = clan;
     }
 }
-
-
 
 public class DarkTemplar : ProtossUnit
 {
@@ -62,7 +59,6 @@ public class DarkTemplar : ProtossUnit
     {
         return Shield;
     }
-
 
     public DarkTemplar() : base("프로토스") {
         Name = "다크템플러";
@@ -131,6 +127,4 @@ class Test
 
         Console.WriteLine();
     }
-
-
 }
