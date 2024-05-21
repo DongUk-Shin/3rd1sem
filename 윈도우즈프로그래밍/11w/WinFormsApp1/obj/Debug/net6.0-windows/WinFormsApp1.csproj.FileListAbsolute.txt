@@ -1,0 +1,16 @@
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+C:\git\3rd1sem\윈도우즈프로그래밍\11w\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
