@@ -129,5 +129,18 @@ class Parser {
         return "+-*%^=()÷".indexOf(c) != -1;
     }
     
+    
+    public static void main(String[] args) {
+        
+        String expr = "1+1";
+        
+        Parser p = new Parser();
+        try {
+            System.out.println("Result: " + p.evaluate(expr));
+            System.out.println();
+        } catch (ParserException exc) {
+            System.out.println(exc);
+        }
+    }
 } 
 
