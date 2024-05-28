@@ -104,5 +104,15 @@ namespace WpfApp2
         {
 
         }
+
+        private void Btn4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_4(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

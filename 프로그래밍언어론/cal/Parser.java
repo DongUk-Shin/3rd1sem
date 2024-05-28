@@ -132,7 +132,7 @@ class Parser {
     
     public static void main(String[] args) {
         
-        String expr = "1+1";
+        String expr = "-(1)+3";
         
         Parser p = new Parser();
         try {
